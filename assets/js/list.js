@@ -9,7 +9,8 @@ var getZip = function() {
 const API_KEY = "ac4aab77f1db8db5e50d166a738d0869";
 
 function getCharitiesByZip(zip) {
-    var url = "https://powerful-retreat-80790.herokuapp.com/http://data.orghunter.com/v1/charitysearch?user_key=" + API_KEY + "&szipCode=" + zip;
+    var url = "https://powerful-retreat-80790.herokuapp.com/http://data.orghunter.com/v1/charitysearch?user_key=" + API_KEY + "&zipCode=" + zip;
+    console.log(url);
     fetch(url)
     .then(response => response.json())
     .then(res => displayCharities(res))
@@ -29,20 +30,25 @@ var displayCharities = function(data) {
         charityNameEl.classList = "title is-5";
         categoryEl.classList = "subtitle is-6";
         charityNameEl.textContent = data.data[i].charityName;
-        categoryEl.textContent = data.data[i].category;
+        charityNameEl.textContent = toProperCase(data.data[i].charityName);
+        charityNameEl.classList.add("capitalize"); 
+        categoryEl.textContent = data.data[i].category + " - " + data.data[i].city + ", " + data.data[0].state;
 
         nameHolder.append(charityNameEl, categoryEl);
-
-        var cityStateEl = document.createElement("p");
-        cityStateEl.textContent = data.data[i].city + ", " + data.data[0].state;
 
         var seeMoreEl = document.createElement("button");
         seeMoreEl.classList = "button is-success is-inverted";
         seeMoreEl.textContent = "See More";
 
-        itemContainer.append(nameHolder, cityStateEl, seeMoreEl);
+        itemContainer.append(nameHolder, seeMoreEl);
         charityListEl.append(itemContainer);
     }
+};
+
+var toProperCase = function(str) {
+    str = str.toLowerCase();
+    console.log(str);
+    return str;
 };
 
 getZip();
