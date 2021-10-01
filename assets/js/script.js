@@ -15,11 +15,7 @@ zipSubmit.addEventListener("click", function(event) {
 })
 
 function getCharitiesByZip(zip) {
-    data = {
-        "user_key": API_KEY,
-        "zipCode":zip
-    }
-    var url = "https://powerful-retreat-80790.herokuapp.com/http://data.orghunter.com/v1/charitysearch?user_key=ac4aab77f1db8db5e50d166a738d0869&searchTerm=treasure%20coast%20humane";
+    var url = "https://powerful-retreat-80790.herokuapp.com/http://data.orghunter.com/v1/charitysearch?user_key=" + API_KEY + "&szipCode=" + zip;
     fetch(url)
     .then(response => response.json())
     .then(res => console.log(res))
