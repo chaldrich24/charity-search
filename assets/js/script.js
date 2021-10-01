@@ -1,15 +1,22 @@
-var getCharityData = function() {
-    var apiUrl = "https://data.orghunter.com/v1/charitysearch?user_key=087d90e10dc627fdf0b4f716aacb3e60&searchTerm=treasure%20coast%20humane";
-    var apiUrlNav = "https://api.data.charitynavigator.org/v2/Organizations?app_id=72650fd4&app_key=06944884fe137960277486619c548a17&zip=20148";
-    var apiUrlEin = "https://api.data.charitynavigator.org/v2/Organizations/135563001?app_id=72650fd4&app_key=06944884fe137960277486619c548a17";
+var zipInput = document.getElementById("zip-input");
+var zipSubmit = document.getElementById("zip-submit");
 
-    fetch(apiUrl).then(function(response) {
-        response.json().then(function(data) {
-            console.log(data);
-        });
-    });
+const API_KEY = "ac4aab77f1db8db5e50d166a738d0869";
 
+zipSubmit.addEventListener("click", function(event) {
+    // event.preventDefault();
+    var zipVal = zipInput.value;
+    if(zipVal.length <= 0) {
+        alert("very bad");
+    }
+    else {
+        getCharitiesByZip(zipVal);
+    }
+});
 
+function getCharitiesByZip(zip) {
+    var url = "https://powerful-retreat-80790.herokuapp.com/http://data.orghunter.com/v1/charitysearch?user_key=" + API_KEY + "&szipCode=" + zip;
+    fetch(url)
+    .then(response => response.json())
+    .then(res => console.log(res))
 };
-
-getCharityData();
