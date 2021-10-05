@@ -38,7 +38,8 @@ var displayCharities = function(data) {
         var seeMoreEl = document.createElement("button");
         seeMoreEl.classList = "button is-success is-inverted";
         seeMoreEl.textContent = "See More...";
-
+        seeMoreEl.setAttribute("ein", data.data[i].ein);
+        seeMoreEl.setAttribute("type", "button")
         itemContainer.append(nameHolder, seeMoreEl);
         charityListEl.append(itemContainer);
     }
@@ -53,4 +54,12 @@ var toProperCase = function(str) {
     );
 };
 
+var seeCharityDetails = function(event) {
+    if (event.target.type === "button") {
+        var ein = event.target.getAttribute("ein");
+        console.log(ein);
+    }
+};
+
 getZip();
+charityListEl.addEventListener("click", seeCharityDetails);
