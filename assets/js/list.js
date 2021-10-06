@@ -57,7 +57,10 @@ var toProperCase = function(str) {
 var seeCharityDetails = function(event) {
     if (event.target.type === "button") {
         var ein = event.target.getAttribute("ein");
+        var queryString = document.location.search;
+        var zipCode = queryString.split("=")[1];
         console.log(ein);
+        document.location.replace("./charity.html?ein=" + ein + "?zipcode=" + zipCode);
     }
 };
 
