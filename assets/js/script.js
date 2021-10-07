@@ -34,6 +34,7 @@ var getNews = function(event) {
         .then(response => response.json())
         .then(function(data) {
             displayNews(data);
+            console.log(data);
         })
     }
 }
@@ -54,13 +55,24 @@ var displayNews = function(news) {
         newsTitle.classList = "is-size-5";
 
         var newsAuthor = document.createElement("p");
-        newsAuthor.textContent = news.data[i].author;
-        
+        if (news.data[i].author === null || news.data[i].author === "") {
+            newsAuthor.textContent = "By: " + news.data[i].source;
+        }
+
+        else {
+            newsAuthor.textContent = "By: " + news.data[i].author;
+        }
+
         var newsArticleEl = document.createElement("div");
         newsArticleEl.classList = "news-article is-flex is-flex-direction-column";
 
+        var newsAnchor = document.createElement("a");
+        newsAnchor.setAttribute("href", news.data[i].url);
+        newsAnchor.setAttribute("target", "_blank");
+
         newsArticleEl.append(newsTitle, newsAuthor);
-        newsContEl.appendChild(newsArticleEl);
+        newsAnchor.appendChild(newsArticleEl);
+        newsContEl.appendChild(newsAnchor);
     }
 }
 

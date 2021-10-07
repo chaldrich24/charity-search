@@ -74,3 +74,7 @@
 .column {
     padding: 0;
 }
+
+.news-container a div {
+    color: #000;
+}
