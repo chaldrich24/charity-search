@@ -28,6 +28,13 @@ function changePage(event) {
 
 var getNews = function(event) {
     if (event.target.type === "button") {
+        var buttonArr = newsButtonsEl.children;
+        for (i = 0; i < buttonArr.length; i++) {
+            buttonArr[i].style.border = "none";
+        }
+
+        event.target.style.border = "2px solid #000";
+
         var offset = getRandomNum(100);
         var url = "http://api.mediastack.com/v1/news?access_key=" + NEWS_API_KEY + "&offset=" + offset + "&sort=popularity&limit=5&languages=en&keywords=" + event.target.textContent;
         fetch(url)
@@ -46,7 +53,6 @@ var getRandomNum = function(total) {
 
 var displayNews = function(news) {
     newsContEl.innerHTML = "";
-    console.log(news);
 
     for (i = 0; i < news.data.length; i++) {
         var newsTitle = document.createElement("p");
