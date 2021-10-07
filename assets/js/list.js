@@ -10,7 +10,7 @@ var getZip = function() {
 
 
 function getCharitiesByZip(zip) {
-    var url = "https://powerful-retreat-80790.herokuapp.com/http://data.orghunter.com/v1/charitysearch?user_key=" + API_KEY + "&zipCode=" + zip;
+    var url = "https://powerful-retreat-80790.herokuapp.com/http://data.orghunter.com/v1/charitysearch?user_key=" + API_KEY + "&eligible=1&zipCode=" + zip;
     console.log(url);
     fetch(url)
     .then(response => response.json())
@@ -30,7 +30,7 @@ var displayCharities = function(data) {
 
         charityNameEl.classList = "title is-5";
         categoryEl.classList = "subtitle is-6";
-        charityNameEl.textContent = toProperCase(data.data[i].charityName);
+        charityNameEl.textContent = data.data[i].charityName;
         categoryEl.textContent = data.data[i].category + " - " + toProperCase(data.data[i].city) + ", " + data.data[0].state;
 
         nameHolder.append(charityNameEl, categoryEl);

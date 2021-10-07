@@ -1,4 +1,8 @@
 var newsEl = document.querySelector("#news-container");
+var backEl = document.querySelector("#search-results");
+var nameEl = document.querySelector("#charity-name");
+var infoEl = document.querySelector("#charity-info");
+
 const API_KEY = "ac4aab77f1db8db5e50d166a738d0869";
 const NEWS_API_KEY = "a5c2b9e921dbcf681f4356e52f806b05";
 
@@ -6,7 +10,10 @@ var getEid = function() {
     var queryString = document.location.search;
     var splitString = queryString.split("=")[1];
     var ein = splitString.split("?")[0];
+    var zip = queryString.split("=")[2];
     console.log(ein);
+    console.log(zip);
+    backEl.setAttribute("href", "./list-page.html?zip=" + zip);
     getCharityInfo(ein);
 };
 
@@ -15,15 +22,23 @@ var getCharityInfo = function(ein) {
     fetch(url).then(function(response) {
         response.json().then(function(data) {
             console.log(data);
-            displayNews(data.data.name);
+            displayNews("charity");
+            displayCharityInfo(data);
         })
     })
+};
+
+var displayCharityInfo = function(data) {
+    nameEl.textContent = data.data.name;
+    var location = document.createElement("p");
+    location.textContent = "Location: " + data.data.city + ", " + data.data.state;
+    infoEl.appendChild(location);
 };
 
 var displayNews = function(name) {
     var searchTerm = name.replace(/\s/g, "-");
     console.log(searchTerm);
-    var url = "http://api.mediastack.com/v1/news?access_key=" + NEWS_API_KEY + "&languages=en&keywords=" + searchTerm;
+    var url = "http://api.mediastack.com/v1/news?access_key=" + NEWS_API_KEY + "&languages=en&keywords=" + name;
     fetch(url).then(function(response) {
         response.json().then(function(data) {
             console.log(data);
