@@ -38,3 +38,47 @@
 .capitalize {
     text-transform: capitalize;
 }
+
+.footer {
+    width: auto;
+    background-color:#48c78e;
+    color: #fff;
+    font-weight: bold;
+    padding: 50px;
+    margin: 180px auto;
+    margin-bottom: 0;
+}
+.input {
+    width: 500px;
+    margin-left: 400px;
+    margin-top: 10px;
+}
+.card {
+    width: 500px;
+    padding: 20px;
+    border: 3px solid #000;
+    margin-top: 50px;
+    margin-left: 400px;
+    margin-bottom: 3px;
+    background-color: #48c78e;
+
+}
+.card-header-title {
+    font-weight: bold;
+    color: #fff;
+    margin-left: 100px;
+
+}
+
+ #zip-submit {
+    width: 500px;
+     margin-top: 10px; 
+     margin-left: 400px;
+    font-weight: bold;
+     padding: 30px; 
+
+
+
+} 
+
+
