@@ -24,6 +24,3 @@ function changePage(event) {
 
 
 }
-
-
-
