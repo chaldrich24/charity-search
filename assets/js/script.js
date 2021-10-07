@@ -1,7 +1,10 @@
 var zipInput = document.getElementById("zip-input");
 var zipSubmit = document.getElementById("zip-submit");
+var newsButtonsEl = document.querySelector("#news-btns");
+var newsContEl = document.querySelector("#news-container");
 
 const API_KEY = "ac4aab77f1db8db5e50d166a738d0869";
+const NEWS_API_KEY = "a5c2b9e921dbcf681f4356e52f806b05";
 
 zipSubmit.addEventListener("click", changePage);
 
@@ -21,6 +24,39 @@ function changePage(event) {
     else {
         document.location.replace("./list-page.html?zip=" + zipVal);
     }
-
-
 }
+
+var getNews = function(event) {
+    if (event.target.type === "button") {
+        var offset = getRandomNum(100);
+        var url = "http://api.mediastack.com/v1/news?access_key=" + NEWS_API_KEY + "&offset=" + offset + "&sort=popularity&limit=5&languages=en&keywords=" + event.target.textContent;
+        fetch(url)
+        .then(response => response.json())
+        .then(function(data) {
+            displayNews(data);
+        })
+    }
+}
+
+var getRandomNum = function(total) {
+    var number = Math.floor(Math.random() * (total));
+    return number;
+}
+
+var displayNews = function(news) {
+    newsContEl.innerHTML = "";
+    console.log(news);
+
+    for (i = 0; i < news.data.length; i++) {
+        var newsTitle = document.createElement("p");
+        newsTitle.textContent = news.data[i].title;
+        
+        var newsArticleEl = document.createElement("div");
+        newsArticleEl.classList = "news-article";
+
+        newsArticleEl.appendChild(newsTitle);
+        newsContEl.appendChild(newsArticleEl);
+    }
+}
+
+newsButtonsEl.addEventListener("click", getNews);
