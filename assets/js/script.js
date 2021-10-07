@@ -50,11 +50,16 @@ var displayNews = function(news) {
     for (i = 0; i < news.data.length; i++) {
         var newsTitle = document.createElement("p");
         newsTitle.textContent = news.data[i].title;
+        newsTitle.style.fontWeight = "bold";
+        newsTitle.classList = "is-size-5";
+
+        var newsAuthor = document.createElement("p");
+        newsAuthor.textContent = news.data[i].author;
         
         var newsArticleEl = document.createElement("div");
-        newsArticleEl.classList = "news-article";
+        newsArticleEl.classList = "news-article is-flex is-flex-direction-column";
 
-        newsArticleEl.appendChild(newsTitle);
+        newsArticleEl.append(newsTitle, newsAuthor);
         newsContEl.appendChild(newsArticleEl);
     }
 }
