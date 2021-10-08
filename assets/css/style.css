@@ -61,6 +61,47 @@
 }
 
 
+.section-title {
+    text-align: center;
+    margin-top: 30px;
+    color: #fff;
+    padding: 50px 0 10px 0;
+}
+
+.news {
+    background-color: #48c78e;
+    padding-bottom: 40px;
+}
+
+.news-btns {
+    width: 60%;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+.news-btns button {
+    margin: 0 10px;
+}
+
+.news-article {
+    width: 70%;
+    margin: 0 auto;
+    border: 2px solid #000;
+    background-color: #c9f3e0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.column {
+    padding: 0;
+}
+
+.news-container a div {
+    color: #000;
+}
+
+
 .charity-info {
     width: 60%;
     margin: 0 auto;
