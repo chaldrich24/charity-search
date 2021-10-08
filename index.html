@@ -17,7 +17,7 @@
   </head>
   <body>
     <!-- Navbar -->
-    <header class="hero is-success is-medium">
+    <header class="hero is-success is-medium top-header">
       <!-- Hero head: will stick at the top -->
       <div class="hero-head">
         <nav class="navbar">
@@ -27,11 +27,10 @@
             </div>
             <div class="navbar-menu">
               <div class="navbar-end">
-
                 <span class="navbar-item">
-                <a ref="About" class="button is-success is-inverted"> About Us </a>
+                  <a href="./index.html#about" class="button is-success is-inverted"> About Us </a>
                 <span class="navbar-item">
-                  <a href="search" class="button is-success is-inverted"> Search </a>
+                  <a href="./index.html#search" class="button is-success is-inverted"> Search </a>
                 </span>
               </div>
             </div>
@@ -41,47 +40,30 @@
 
     </header>
     <!-- Search 1 Section -->
-    <div class="container" class="has-background-primary">
-      <!-- NOT FOR MVP -->
+
       <section id='about'> 
         <h2 class="text">About Us</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
           dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non.</p>
-        <!-- <input type="text" /> -->
       </section>
 
-      <section class="search">
-        <div class="card">
-          <header class="card-header">
-            <p class="card-header-title">
-              Charity Location / Category
-            </p>
-          </header>
+      <section id="search">
+        <div class="search is-flex is-flex-direction-column">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title is-centered">
+                Charity Location / Category
+              </p>
+            </header>
+          </div>
+          <input type="text" id="zip-input" placeholder="enter zipcode" class="input is-success" />
+          <button class="button is-success is-outlined" id="zip-submit">Search</button>
         </div>
       </section>
-        <!-- FOR MVP - ZIP CODE SEARCH -->
-        <input type="text" id="zip-input" placeholder="enter zipcode" class="input is-success" />
-        <button class="button is-success is-outlined" id="zip-submit">Search</button>
+      <!-- FOR MVP - ZIP CODE SEARCH -->
+      
 
-
-  <!-- News Section -->
-  <section class="news">
-    <h2 class="title is-3 section-title">Related News</h2>
-    <div>
-      <div class="columns news-btns" id="news-btns">
-        <button class="column button is-success is-inverted" type="button">Charity</button>
-        <button class="column button is-success is-inverted" type="button">Philanthropy</button>
-        <button class="column button is-success is-inverted" type="button">Foundation</button>
-        <button class="column button is-success is-inverted" type="button">Donation</button>
-      </div>
-      <div class="news-container" id="news-container">
-        <a>
-          <div class="news-article">News Title</div>
-        </a>
-      </div>
-    </div>
-  </section>
 
     <!-- News Section -->
     <section class="news">
@@ -100,7 +82,6 @@
         </div>
       </div>
     </section>
-
 
     <!-- Footer -->
 
