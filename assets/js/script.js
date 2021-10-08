@@ -46,6 +46,7 @@ var getNews = function(event) {
     }
 }
 
+
 var getRandomNum = function(total) {
     var number = Math.floor(Math.random() * (total));
     return number;
@@ -83,3 +84,6 @@ var displayNews = function(news) {
 }
 
 newsButtonsEl.addEventListener("click", getNews);
+
+}
+

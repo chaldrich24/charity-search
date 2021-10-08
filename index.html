@@ -27,17 +27,44 @@
             </div>
             <div class="navbar-menu">
               <div class="navbar-end">
+
+                <a href="home" class="navbar-item"> Home </a>
+                <a ref="About" class="navbar-item"> About Us </a>
+                <!-- <a ref="Documentation" class="navbar-item"> Documentation </a> -->
+                <span class="navbar-item">
+                  <a href="search" class="button is-success is-inverted"> Search </a>
                 <a class="navbar-item"> Home </a>
                 <a class="navbar-item"> About Us </a>
                 <a class="navbar-item"> Related News </a>
                 <span class="navbar-item">
                   <a class="button is-success is-inverted"> Search </a>
+
                 </span>
               </div>
             </div>
           </div>
         </nav>
       </div>
+
+    </header>
+    <!-- Search 1 Section -->
+    <div class="container" class="has-background-primary">
+      <!-- NOT FOR MVP -->
+      <section id='about'> 
+        <h2 class="text">About Us</h2>
+        <!-- <input type="text" /> -->
+      </section>
+      <!-- Search 2 Section -->
+      <section id="search" >
+        <!-- FOR MVP - ZIP CODE SEARCH -->
+        <h2 class="text">Charity Location / Category Search</h2>
+        <input type="text" id="zip-input" placeholder="enter zip" />
+        <button id="zip-submit">Go</button>
+      </section>
+    </div>
+    <!-- Footer -->
+    <footer class= "mt-6 p-3">
+      <h2>Footer</h2>
 
       <!-- Hero content: will be in the middle -->
       <div class="hero-body">
@@ -58,6 +85,21 @@
 
       <!-- Search 2 Section -->
       <section>
+
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">
+              Charity Location / Category
+            </p>
+          </header>
+        </div>
+        <!-- FOR MVP - ZIP CODE SEARCH -->
+        <!-- <h2>Charity Location / Category Search</h2> -->
+        <input type="text" id="zip-input" placeholder="enter zip" class="input is-success" />
+        <button class="button is-success is-outlined" id="zip-submit">Search</button>
+
+        <!-- <button id="zip-submit">go</button> -->
+
         <!-- FOR MVP - ZIP CODE SEARCH -->
         <h2>Charity Location / Category Search</h2>
         <input type="text" id="zip-input" placeholder="enter zip" />
@@ -84,10 +126,23 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-      <h2>Footer</h2>
-    </footer>
 
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          <strong>Bulma</strong> by <a href="https://dutylabs.ro">Duty Labs</a>. The source code is licensed
+          <a href="#">DutyLabs</a>. The website content
+          is licensed <a href="#">CC BY Alex Rusu</a>.
+        </p>
+        </div>
+      </div>
+      <!-- <h2>Footer</h2> -->
+
+    </footer>
     <script src="./assets/js/script.js"></script>
   </body>
+
 </html>
+
+</html>
+
