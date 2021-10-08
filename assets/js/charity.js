@@ -3,7 +3,7 @@ var backEl = document.querySelector("#search-results");
 var nameEl = document.querySelector("#charity-name");
 var infoEl = document.querySelector("#charity-info");
 
-const API_KEY = "ac4aab77f1db8db5e50d166a738d0869";
+const API_KEY = "087d90e10dc627fdf0b4f716aacb3e60";
 const NEWS_API_KEY = "a5c2b9e921dbcf681f4356e52f806b05";
 
 var getEid = function() {
@@ -33,17 +33,6 @@ var displayCharityInfo = function(data) {
     var location = document.createElement("p");
     location.textContent = "Location: " + data.data.city + ", " + data.data.state;
     infoEl.appendChild(location);
-};
-
-var displayNews = function(name) {
-    var searchTerm = name.replace(/\s/g, "-");
-    console.log(searchTerm);
-    var url = "http://api.mediastack.com/v1/news?access_key=" + NEWS_API_KEY + "&languages=en&keywords=" + name;
-    fetch(url).then(function(response) {
-        response.json().then(function(data) {
-            console.log(data);
-        })
-    })
 };
 
 getEid();

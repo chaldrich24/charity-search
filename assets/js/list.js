@@ -1,5 +1,5 @@
 var charityListEl = document.querySelector("#charity-list");
-const API_KEY = "ac4aab77f1db8db5e50d166a738d0869";
+const API_KEY = "087d90e10dc627fdf0b4f716aacb3e60";
 
 var getZip = function() {
     var queryString = document.location.search;
@@ -43,15 +43,6 @@ var displayCharities = function(data) {
         itemContainer.append(nameHolder, seeMoreEl);
         charityListEl.append(itemContainer);
     }
-};
-
-var toProperCase = function(str) {
-    return str.replace(
-        /\w\S*/g,
-        function(txt) {
-          return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-        }
-    );
 };
 
 var seeCharityDetails = function(event) {
