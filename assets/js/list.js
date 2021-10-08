@@ -31,7 +31,7 @@ var displayCharities = function(data) {
         charityNameEl.classList = "title is-5";
         categoryEl.classList = "subtitle is-6";
         charityNameEl.textContent = data.data[i].charityName;
-        categoryEl.textContent = data.data[i].category + " - " + toProperCase(data.data[i].city) + ", " + data.data[0].state;
+        categoryEl.textContent = data.data[i].category + " - " + data.data[i].city + ", " + data.data[0].state;
 
         nameHolder.append(charityNameEl, categoryEl);
 

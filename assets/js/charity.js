@@ -22,7 +22,6 @@ var getCharityInfo = function(ein) {
     fetch(url).then(function(response) {
         response.json().then(function(data) {
             console.log(data);
-            displayNews("charity");
             displayCharityInfo(data);
         })
     })
