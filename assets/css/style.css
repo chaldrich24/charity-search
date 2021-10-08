@@ -2,6 +2,27 @@
     font-family: 'Abril Fatface', cursive;
 }
 
+#about {
+    background-color: #48c78e;
+    padding: 25%;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+#search {
+    background-color: #48c78e;
+    padding: 25%;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.text {
+    position: absolute;
+    color: white;
+}
+
 .list-item {
     margin: 10px auto;
     width: 60%;
@@ -83,4 +104,5 @@
     font-weight: bold;
      padding: 30px; 
 } 
+
 
