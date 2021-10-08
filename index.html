@@ -1,80 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Charity Search</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/style.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
     <!-- Navbar -->
-    <section class="hero is-success is-medium">
-        <!-- Hero head: will stick at the top -->
-        <div class="hero-head">
-          <nav class="navbar">
-            <div class="container">
-              <div class="navbar-brand">
-                <a class="navbar-item title site-name">
-                  CHARITY SEARCH
-                </a>
-              </div>
-              <div class="navbar-menu">
-                <div class="navbar-end">
-                  <a class="navbar-item">
-                    Home
-                  </a>
-                  <a class="navbar-item">
-                    About Us
-                  </a>
-                  <a class="navbar-item">
-                    Documentation
-                  </a>
-                  <span class="navbar-item">
-                    <a class="button is-success is-inverted">
-                      Search
-                    </a>
-                  </span>
-                </div>
+    <header class="hero is-success is-medium">
+      <!-- Hero head: will stick at the top -->
+      <div class="hero-head">
+        <nav class="navbar">
+          <div class="container">
+            <div class="navbar-brand">
+              <a class="navbar-item title site-name"> CHARITY SEARCH </a>
+            </div>
+            <div class="navbar-menu">
+              <div class="navbar-end">
+                <a href="home" class="navbar-item"> Home </a>
+                <a ref="About" class="navbar-item"> About Us </a>
+                <!-- <a ref="Documentation" class="navbar-item"> Documentation </a> -->
+                <span class="navbar-item">
+                  <a href="search" class="button is-success is-inverted"> Search </a>
+                </span>
               </div>
             </div>
-          </nav>
-        </div>
-      
-        <!-- Hero content: will be in the middle -->
-        <div class="hero-body">
-          <div class="container has-text-centered">
-            <p class="title">
-              Title
-            </p>
-            <p class="subtitle">
-              Subtitle
-            </p>
           </div>
-        </div>
-    </section>
-
+        </nav>
+      </div>
+    </header>
     <!-- Search 1 Section -->
-    <section>
-        <h2>Charity EIN Search</h2>
-        <input type="text"></input>
-
-    </section>
-
-     <!-- Search 2 Section -->
-     <section>
-        <h2>Charity Location / Category Search</h2>
-        <input type="text"></input>
-
-    </section>
-
+    <div class="container" class="has-background-primary">
+      <!-- NOT FOR MVP -->
+      <section id='about'> 
+        <h2 class="text">About Us</h2>
+        <!-- <input type="text" /> -->
+      </section>
+      <!-- Search 2 Section -->
+      <section id="search" >
+        <!-- FOR MVP - ZIP CODE SEARCH -->
+        <h2 class="text">Charity Location / Category Search</h2>
+        <input type="text" id="zip-input" placeholder="enter zip" />
+        <button id="zip-submit">Go</button>
+      </section>
+    </div>
     <!-- Footer -->
-    <footer>
-        <h2>Footer</h2>
+    <footer class= "mt-6 p-3">
+      <h2>Footer</h2>
     </footer>
-
     <script src="./assets/js/script.js"></script>
-</body>
+  </body>
 </html>
