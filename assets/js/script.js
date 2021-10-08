@@ -1,3 +1,5 @@
+
+   
 var zipInput = document.getElementById("zip-input");
 var zipSubmit = document.getElementById("zip-submit");
 var newsButtonsEl = document.querySelector("#news-btns");
@@ -84,6 +86,3 @@ var displayNews = function(news) {
 }
 
 newsButtonsEl.addEventListener("click", getNews);
-
-}
-

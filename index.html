@@ -28,19 +28,10 @@
             <div class="navbar-menu">
               <div class="navbar-end">
 
-                <!-- <a href="home" class="navbar-item"> Home </a> -->
-                <a ref="About" class="navbar-item"> About Us </a>
-                <!-- <a ref="Documentation" class="navbar-item"> Documentation </a> -->
+                <span class="navbar-item">
+                <a ref="About" class="button is-success is-inverted"> About Us </a>
                 <span class="navbar-item">
                   <a href="search" class="button is-success is-inverted"> Search </a>
-
-                <a class="navbar-item"> Home </a>
-                <a class="navbar-item"> About Us </a>
-                <a class="navbar-item"> Related News </a>
-                <span class="navbar-item">
-                  <a class="button is-success is-inverted"> Search </a>
-
-
                 </span>
               </div>
             </div>
@@ -59,11 +50,8 @@
           dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non.</p>
         <!-- <input type="text" /> -->
       </section>
-     
 
-      <!-- Search 2 Section -->
-      <section>
-
+      <section class="search">
         <div class="card">
           <header class="card-header">
             <p class="card-header-title">
@@ -71,19 +59,29 @@
             </p>
           </header>
         </div>
+      </section>
         <!-- FOR MVP - ZIP CODE SEARCH -->
         <input type="text" id="zip-input" placeholder="enter zipcode" class="input is-success" />
         <button class="button is-success is-outlined" id="zip-submit">Search</button>
 
 
-        <!-- <button id="zip-submit">go</button> -->
-
-        <!-- FOR MVP - ZIP CODE SEARCH -->
-        <h2>Charity Location / Category Search</h2>
-        <input type="text" id="zip-input" placeholder="enter zip" />
-        <button id="zip-submit">go</button>
-      </section>
+  <!-- News Section -->
+  <section class="news">
+    <h2 class="title is-3 section-title">Related News</h2>
+    <div>
+      <div class="columns news-btns" id="news-btns">
+        <button class="column button is-success is-inverted" type="button">Charity</button>
+        <button class="column button is-success is-inverted" type="button">Philanthropy</button>
+        <button class="column button is-success is-inverted" type="button">Foundation</button>
+        <button class="column button is-success is-inverted" type="button">Donation</button>
+      </div>
+      <div class="news-container" id="news-container">
+        <a>
+          <div class="news-article">News Title</div>
+        </a>
+      </div>
     </div>
+  </section>
 
     <!-- News Section -->
     <section class="news">
@@ -109,9 +107,9 @@
     <footer class="footer">
       <div class="content has-text-centered">
         <p>
-          <strong>Bulma</strong> by <a href="https://dutylabs.ro">Duty Labs</a>. The source code is licensed
-          <a href="#">DutyLabs</a>. The website content
-          is licensed <a href="#">CC BY Alex Rusu</a>.
+          <strong>Bulma</strong><a href="https://dutylabs.ro"></a>. The source code is licensed
+          <a href="#"></a>.
+          <a href="#">CC BY Alex Rusu</a>.
         </p>
         </div>
       </div>

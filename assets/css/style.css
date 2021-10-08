@@ -4,22 +4,14 @@
 
 #about {
     background-color: #48c78e;
-    padding: 25%;
+    padding: 15%;
     margin: auto;
     margin-top: 5%;
     margin-bottom: 5%;
 }
 
-/* #search {
-    background-color: #48c78e;
-    padding: 25%;
-    margin: auto;
-    margin-top: 5%;
-    margin-bottom: 5%;
-} */
-
 .text {
-    position: absolute;
+    text-align: center;
     color: white;
 }
 
@@ -70,7 +62,7 @@
 
 .news {
     background-color: #48c78e;
-    padding-bottom: 40px;
+    padding-bottom: 15%;
 }
 
 .news-btns {
@@ -108,28 +100,28 @@
 }
 
 .footer {
-    width: auto;
+    /* width: auto; */
     background-color:#48c78e;
     color: #fff;
     font-weight: bold;
     padding: 50px;
-    margin: 180px auto;
-    margin-bottom: 0;
+    /* margin: 180px auto; */
+    margin-top: 5%;
 }
 .input {
     width: 500px;
     margin-left: 400px;
     margin-top: 10px;
 }
+
 .card {
     width: 500px;
     padding: 20px;
     border: 3px solid #000;
-    margin-top: 50px;
+    margin-top: 100px;
     margin-left: 400px;
-    margin-bottom: 3px;
+    margin-bottom: 20px;
     background-color: #48c78e;
-
 }
 .card-header-title {
     font-weight: bold;
@@ -144,6 +136,5 @@
      margin-left: 400px;
     font-weight: bold;
      padding: 30px; 
+     margin-bottom: 100px;
 } 
-
-
