@@ -24,8 +24,8 @@
             <div class="navbar-menu">
               <div class="navbar-end">
                 <span class="navbar-item">
-                  <a href="./index.html" class="button is-success is-inverted">
-                    Go Back
+                  <a href="./index.html" class="button is-success is-inverted" id="search-results">
+                    Back to Search Results
                   </a>
                 </span>
               </div>
@@ -35,34 +35,21 @@
       </div>
     </section>
 
-    <!-- List Section -->
-    <section id="charity-list">
-      <h2 class="is-centered title page-title">Charity Search Results</h2>
-      <div class="is-fullwidth is-medium is-flex is-justify-content-space-between is-align-items-center list-item">
-        <div>
-          <h2 class="title is-5">Charity Name</h2>
-          <h3 class="subtitle is-6">Category</h3>
-        </div>
-        <p>City, State</p>
-        <button class="button is-success is-inverted see-more">See Details</button>
+    <!-- Charity Information -->
+    <section>
+      <h2 class="is-centered title page-title" id="charity-name">Charity Name</h2>
+      <div class="is-centered is-flex is-flex-direction-column charity-info" id="charity-info">
+      </div>
+      <div id="news-container">
+        <h3 class="is-centered title page-title">News</h3>
       </div>
     </section>
 
     <!-- Footer -->
-      <footer class="footer">
-        <div class="content has-text-centered">
-          <p>
-            <strong>Bulma</strong> by <a href="https://dutylabs.ro">Duty Labs</a>. The source code is licensed
-            <a href="#">DutyLabs</a>. The website content
-            is licensed <a href="#">CC BY Alex Rusu</a>.
-          </p>
-          </div>
-        </div>
-        <!-- <h2>Footer</h2> -->
-      </footer>
+    <footer>
+      <h2>Footer</h2>
+    </footer>
 
-
-
-    <script src="./assets/js/list.js"></script>
+    <script src="./assets/js/charity.js"></script>
 </body>
 </html>

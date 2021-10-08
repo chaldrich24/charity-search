@@ -39,6 +39,12 @@
     text-transform: capitalize;
 }
 
+
+.charity-info {
+    width: 60%;
+    margin: 0 auto;
+}
+
 .footer {
     width: auto;
     background-color:#48c78e;
@@ -76,9 +82,5 @@
      margin-left: 400px;
     font-weight: bold;
      padding: 30px; 
-
-
-
 } 
-
 

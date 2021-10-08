@@ -1,5 +1,5 @@
 var charityListEl = document.querySelector("#charity-list");
-const API_KEY = "ac4aab77f1db8db5e50d166a738d0869";
+const API_KEY = "087d90e10dc627fdf0b4f716aacb3e60";
 
 var getZip = function() {
     var queryString = document.location.search;
@@ -10,7 +10,7 @@ var getZip = function() {
 
 
 function getCharitiesByZip(zip) {
-    var url = "https://powerful-retreat-80790.herokuapp.com/http://data.orghunter.com/v1/charitysearch?user_key=" + API_KEY + "&zipCode=" + zip;
+    var url = "https://powerful-retreat-80790.herokuapp.com/http://data.orghunter.com/v1/charitysearch?user_key=" + API_KEY + "&eligible=1&zipCode=" + zip;
     console.log(url);
     fetch(url)
     .then(response => response.json())
@@ -30,7 +30,7 @@ var displayCharities = function(data) {
 
         charityNameEl.classList = "title is-5";
         categoryEl.classList = "subtitle is-6";
-        charityNameEl.textContent = toProperCase(data.data[i].charityName);
+        charityNameEl.textContent = data.data[i].charityName;
         categoryEl.textContent = data.data[i].category + " - " + toProperCase(data.data[i].city) + ", " + data.data[0].state;
 
         nameHolder.append(charityNameEl, categoryEl);
@@ -38,19 +38,22 @@ var displayCharities = function(data) {
         var seeMoreEl = document.createElement("button");
         seeMoreEl.classList = "button is-success is-inverted";
         seeMoreEl.textContent = "See More...";
-
+        seeMoreEl.setAttribute("ein", data.data[i].ein);
+        seeMoreEl.setAttribute("type", "button")
         itemContainer.append(nameHolder, seeMoreEl);
         charityListEl.append(itemContainer);
     }
 };
 
-var toProperCase = function(str) {
-    return str.replace(
-        /\w\S*/g,
-        function(txt) {
-          return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-        }
-    );
+var seeCharityDetails = function(event) {
+    if (event.target.type === "button") {
+        var ein = event.target.getAttribute("ein");
+        var queryString = document.location.search;
+        var zipCode = queryString.split("=")[1];
+        console.log(ein);
+        document.location.replace("./charity.html?ein=" + ein + "?zipcode=" + zipCode);
+    }
 };
 
 getZip();
+charityListEl.addEventListener("click", seeCharityDetails);
