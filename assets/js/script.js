@@ -86,5 +86,3 @@ var displayNews = function(news) {
 }
 
 newsButtonsEl.addEventListener("click", getNews);
-
-}
