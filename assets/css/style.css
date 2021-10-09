@@ -98,4 +98,41 @@
      padding: 30px; 
 } 
 
+#about {
+    background-color: #48c78e;
+    padding: 5%;
+    width: 75%;
+    margin: auto;
+}
 
+* {
+    box-sizing: border-box;
+  }
+  
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+  
+  /* Clearfix (clear floats) */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+#search {
+    padding-top: 5%;
+}
+.footer {
+    background-size: 100% 100%;
+}
+
+
+img {
+    float: left;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
