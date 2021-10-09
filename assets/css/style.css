@@ -1,5 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('../images/aaron-burden-y0h45Oemrx4-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+img {
+    float: left;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
 .site-name {
     font-family: 'Abril Fatface', cursive;
+}
+
+.top-header {
+    margin-bottom: 5%;
 }
 
 #about {
@@ -8,12 +30,6 @@
     margin: auto;
     margin-top: 5%;
     margin-bottom: 5%;
-}
-
-
-.text {
-    position: absolute;
-    color: white;
 }
 
 .list-item {
@@ -46,6 +62,7 @@
 
 .page-title {
     margin-top: 50px;
+    margin-bottom: 50px;
     text-align: center;
 }
 
@@ -55,8 +72,13 @@
 
 
 .charity-info {
-    width: 60%;
+    width: 45%;
     margin: 0 auto;
+}
+
+.charity-info p {
+    font-size: 20px;
+    margin-bottom: 25px;
 }
 
 .footer {
@@ -70,69 +92,123 @@
 }
 .input {
     width: 500px;
-    margin-left: 400px;
-    margin-top: 10px;
+    border: 3px solid #48c78e;
 }
+
+.search {
+    width: 500px;
+    margin: 0 auto;
+}
+
 .card {
     width: 500px;
     padding: 20px;
     border: 3px solid #000;
-    margin-top: 50px;
-    margin-left: 400px;
-    margin-bottom: 3px;
+    margin-bottom: 10px;
     background-color: #48c78e;
-
 }
+
+.card-header {
+    box-shadow: none;
+}
+
 .card-header-title {
     font-weight: bold;
     color: #fff;
-    margin-left: 100px;
-
+    font-size: 20px;
 }
 
- #zip-submit {
-    width: 500px;
-     margin-top: 10px; 
-     margin-left: 400px;
-    font-weight: bold;
-     padding: 30px; 
-} 
+.section-title {
+    text-align: center;
+    color: #fff;
+    padding: 50px 0 15px 0;
+    border-bottom: 2px solid #fff;
+    display: inline-block;
+    width: 50%;
+    margin: 0 auto 40px auto;
+}
 
-#about {
+.news .section-title {
+    width: 42%;
+}
+
+.news {
     background-color: #48c78e;
-    padding: 5%;
+    padding-bottom: 5%;
     width: 75%;
-    margin: auto;
+    margin: 100px auto 0px auto;
 }
 
-* {
-    box-sizing: border-box;
-  }
-  
-  .column {
+.news-container a div {
+    color: #000;
+}
+
+.news-btns {
+    width: 60%;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+.news-btns button {
+    margin: 0 10px;
+    padding: 0;
+}
+
+.news-article {
+    width: 70%;
+    margin: 0 auto;
+    border: 2px solid #000;
+    background-color: #c9f3e0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.about-image {
     float: left;
     width: 33.33%;
     padding: 5px;
-  }
-  
-  /* Clearfix (clear floats) */
-  .row::after {
+}
+
+.row {
+    margin-bottom: 30px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
     content: "";
     clear: both;
     display: table;
-  }
-
-#search {
-    padding-top: 5%;
 }
+
+.charity-section {
+    background-color: rgb(72, 199, 142,0.7);
+    border: 3px solid #000;
+    width: 70%;
+    margin: 70px auto 0 auto;
+    padding: 0 30px 30px 30px;
+}
+
 .footer {
     background-size: 100% 100%;
 }
 
-
-img {
-    float: left;
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
+#search {
+    padding-top: 5%;
 }
+
+#zip-submit {
+    width: 500px;
+    font-weight: bold;
+    padding: 30px; 
+    margin-top: 10px;
+    border: 3px solid #000;
+} 
+
+#about {
+    background-color: #48c78e;
+    padding: 2% 5% 5% 5%;
+    width: 75%;
+    margin: auto;
+}
+

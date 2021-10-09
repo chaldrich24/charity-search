@@ -15,8 +15,6 @@
 <body>
   <!-- Navbar -->
   <header class="hero is-success is-medium top-header">
-    <!-- <div style="background-image: url('');"> -->
-
     <!-- Hero head: will stick at the top -->
     <div class="hero-head">
       <nav class="navbar">
@@ -27,44 +25,35 @@
           <div class="navbar-menu">
             <div class="navbar-end">
               <span class="navbar-item">
+                <span class="navbar-item">
                 <a href="./index.html#about" class="button is-success is-inverted"> About Us </a>
+                </span>
                 <span class="navbar-item">
                   <a href="./index.html#search" class="button is-success is-inverted"> Search </a>
+                </span>
+                <span class="navbar-item">
+                  <a href="./index.html#news-section" class="button is-success is-inverted"> News </a>
                 </span>
             </div>
           </div>
         </div>
       </nav>
     </div>
-    
-
   </header>
   <!-- Search 1 Section -->
-  <section id='about'> 
-
+  <section id='about' class="is-flex is-flex-direction-column "> 
+    <h2 class="title is-3 section-title">About Us</h2>
     <div class="row">
-      <div class="column">
+      <div class="column about-image">
         <img src="./assets/images/larm-rmah-AEaTUnvneik-unsplash.jpg" alt="kids" style="width:100%">
       </div>
-      <div class="column">
+      <div class="column about-image">
         <img src="./assets/images/bianca-berndt-7fzINre0NQE-unsplash.jpg" alt="straight hair girl" style="width:100%">
       </div>
-      <div class="column">
+      <div class="column about-image">
         <img src="./assets/images/eye-for-ebony-OWi1sIWiCAI-unsplash.jpg" alt="curly hair girl" style="width:100%">
       </div>
     </div>
-
-
-      <style>
-        body {
-          background-image: url('./assets/images/aaron-burden-y0h45Oemrx4-unsplash.jpg');
-          background-repeat: no-repeat;
-          background-attachment: fixed;
-          background-size: 100% 100%;
-        }
-        </style>
-
-    <h2 class="text">About Us</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
       magna aliqua.
       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
@@ -83,14 +72,14 @@
           </p>
         </header>
       </div>
-      <input type="text" id="zip-input" placeholder="enter zipcode" class="input is-success" />
-      <button class="button is-success is-outlined" id="zip-submit">Search</button>
+      <input type="text" id="zip-input" placeholder="Enter zip code" class="input is-success" />
+      <button class="button is-success" id="zip-submit">Search</button>
     </div>
   </section>
   <!-- FOR MVP - ZIP CODE SEARCH -->
 
   <!-- News Section -->
-  <section class="news">
+  <section class="news is-flex is-flex-direction-column" id="news-section">
     <h2 class="title is-3 section-title">Related News</h2>
     <div>
       <div class="columns news-btns" id="news-btns">
@@ -116,8 +105,6 @@
       </p>
     </div>
     </div>
-    <!-- <h2>Footer</h2> -->
-
   </footer>
   <script src="./assets/js/script.js"></script>
 </body>

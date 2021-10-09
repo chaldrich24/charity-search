@@ -29,9 +29,53 @@ var getCharityInfo = function(ein) {
 
 var displayCharityInfo = function(data) {
     nameEl.textContent = data.data.name;
-    var location = document.createElement("p");
-    location.textContent = "Location: " + data.data.city + ", " + data.data.state;
-    infoEl.appendChild(location);
+
+    for (i = 0; i < 8; i++) {
+        var info = document.createElement("p");
+        info.classList = "has-text-white";
+        
+        switch (i) {
+            case 0:
+                var property = "EIN";
+                var value = data.data.ein;
+                break;
+            case 1:
+                var property = "Ruling Date";
+                var value = data.data.rullingDate;
+                break;
+            case 2:
+                var property = "Address";
+                var value = data.data.street;
+                break;
+            case 3:
+                var property = "Location";
+                var value = data.data.city + ", " + data.data.state;
+                break;
+            case 4:
+                var property = "Organization Type";
+                var value = data.data.organization;
+                break;
+            case 5:
+                var property = "Classification";
+                var value = data.data.classification;
+                break;
+            case 6:
+                var property = "Related Category";
+                var value = data.data.activity1;
+                break;
+            case 7:
+                var property = "Affiliation";
+                var value = data.data.affiliation;
+            break;
+        }
+
+        if (value === null || value === "") {
+            value = "Data unavailable";
+        }
+
+        info.innerHTML = "<span style='font-weight:bold'>" + property + ": </span>" + value;
+        infoEl.appendChild(info);
+    }
 };
 
 getEid();
