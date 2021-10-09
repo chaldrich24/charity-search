@@ -139,9 +139,23 @@
 
 #about {
     background-color: #48c78e;
-    padding: 15%;
     width: 75%;
     margin: auto;
+}
+
+#about .about-cont {
+    width: 60%;
+    padding-left: 10px;
+}
+
+#about .images {
+    width: 30%;
+}
+
+#about img {
+    height: 210px;
+    width: 100%;
+    object-fit: cover;
 }
 
 #search {
