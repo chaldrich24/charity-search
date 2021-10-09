@@ -1,104 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Charity Search</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-  </head>
-  <body>
-    <!-- Navbar -->
-    <header class="hero is-success is-medium top-header">
-      <!-- Hero head: will stick at the top -->
-      <div class="hero-head">
-        <nav class="navbar">
-          <div class="container">
-            <div class="navbar-brand">
-              <a class="navbar-item title site-name"> CHARITY SEARCH </a>
-            </div>
-            <div class="navbar-menu">
-              <div class="navbar-end">
-                <span class="navbar-item">
-                  <a href="./index.html#about" class="button is-success is-inverted"> About Us </a>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Charity Search</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header class="hero is-success is-medium top-header">
+    <!-- <div style="background-image: url('');"> -->
+
+    <!-- Hero head: will stick at the top -->
+    <div class="hero-head">
+      <nav class="navbar">
+        <div class="container">
+          <div class="navbar-brand">
+            <a class="navbar-item title site-name"> CHARITY SEARCH </a>
+          </div>
+          <div class="navbar-menu">
+            <div class="navbar-end">
+              <span class="navbar-item">
+                <a href="./index.html#about" class="button is-success is-inverted"> About Us </a>
                 <span class="navbar-item">
                   <a href="./index.html#search" class="button is-success is-inverted"> Search </a>
                 </span>
-              </div>
             </div>
           </div>
-        </nav>
+        </div>
+      </nav>
+    </div>
+    
+
+  </header>
+  <!-- Search 1 Section -->
+  <section id='about'> 
+
+    <div class="row">
+      <div class="column">
+        <img src="./assets/images/larm-rmah-AEaTUnvneik-unsplash.jpg" alt="kids" style="width:100%">
       </div>
-
-    </header>
-    <!-- Search 1 Section -->
-
-      <section id='about'> 
-        <h2 class="text">About Us</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-          dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non.</p>
-      </section>
-
-      <section id="search">
-        <div class="search is-flex is-flex-direction-column">
-          <div class="card">
-            <header class="card-header">
-              <p class="card-header-title is-centered">
-                Charity Location / Category
-              </p>
-            </header>
-          </div>
-          <input type="text" id="zip-input" placeholder="enter zipcode" class="input is-success" />
-          <button class="button is-success is-outlined" id="zip-submit">Search</button>
-        </div>
-      </section>
-      <!-- FOR MVP - ZIP CODE SEARCH -->
-      
-
-
-    <!-- News Section -->
-    <section class="news">
-      <h2 class="title is-3 section-title">Related News</h2>
-      <div>
-        <div class="columns news-btns" id="news-btns">
-          <button class="column button is-success is-inverted" type="button">Charity</button>
-          <button class="column button is-success is-inverted" type="button">Philanthropy</button>
-          <button class="column button is-success is-inverted" type="button">Foundation</button>
-          <button class="column button is-success is-inverted" type="button">Donation</button>
-        </div>
-        <div class="news-container" id="news-container">
-      
-        </div>
+      <div class="column">
+        <img src="./assets/images/bianca-berndt-7fzINre0NQE-unsplash.jpg" alt="straight hair girl" style="width:100%">
       </div>
-    </section>
-
-    <!-- Footer -->
-
-    <footer class="footer">
-      <div class="content has-text-centered">
-        <p>
-          <strong>Bulma</strong><a href="https://dutylabs.ro"></a>. The source code is licensed
-          <a href="#"></a>.
-          <a href="#">CC BY Alex Rusu</a>.
-        </p>
-        </div>
+      <div class="column">
+        <img src="./assets/images/eye-for-ebony-OWi1sIWiCAI-unsplash.jpg" alt="curly hair girl" style="width:100%">
       </div>
-      <!-- <h2>Footer</h2> -->
+    </div>
 
-    </footer>
-    <script src="./assets/js/script.js"></script>
-  </body>
+      <style>
+        body {
+          background-image: url('./assets/images/aaron-burden-y0h45Oemrx4-unsplash.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: 100% 100%;
+        }
+        </style>
+
+    <h2 class="text">About Us</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua.
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+      aute irure
+      dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non.</p>
+
+  </section>
+
+  <section id="search">
+    <div class="search is-flex is-flex-direction-column">
+      <div class="card">
+        <header class="card-header">
+          <p class="card-header-title is-centered">
+            Charity Location / Category
+          </p>
+        </header>
+      </div>
+      <input type="text" id="zip-input" placeholder="enter zipcode" class="input is-success" />
+      <button class="button is-success is-outlined" id="zip-submit">Search</button>
+    </div>
+  </section>
+  <!-- FOR MVP - ZIP CODE SEARCH -->
+
+
+
+  <!-- News Section -->
+  <section class="news">
+    <h2 class="title is-3 section-title">Related News</h2>
+    <div>
+      <div class="columns news-btns" id="news-btns">
+        <button class="column button is-success is-inverted" type="button">Charity</button>
+        <button class="column button is-success is-inverted" type="button">Philanthropy</button>
+        <button class="column button is-success is-inverted" type="button">Foundation</button>
+        <button class="column button is-success is-inverted" type="button">Donation</button>
+      </div>
+      <div class="news-container" id="news-container">
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Bulma</strong><a href="https://dutylabs.ro"></a>. The source code is licensed
+        <a href="#"></a>.
+        <a href="#">CC BY Alex Rusu</a>.
+      </p>
+    </div>
+    </div>
+    <!-- <h2>Footer</h2> -->
+
+  </footer>
+  <script src="./assets/js/script.js"></script>
+</body>
 
 </html>
 
 </html>
-
