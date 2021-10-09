@@ -17,7 +17,7 @@
   </head>
   <body>
     <!-- Navbar -->
-    <header class="hero is-success is-medium top-header">
+    <header class="hero is-success is-medium">
       <!-- Hero head: will stick at the top -->
       <div class="hero-head">
         <nav class="navbar">
@@ -26,11 +26,15 @@
               <a class="navbar-item title site-name"> CHARITY SEARCH </a>
             </div>
             <div class="navbar-menu">
-              <div class="navbar-end">
-                <span class="navbar-item">
-                <a ref="About" class="button is-success is-inverted"> About Us </a>
-                <span class="navbar-item">
-                  <a href="search" class="button is-success is-inverted"> Search </a>
+              <div class="navbar-end"></div>
+                <span class="navbar-item"></span>
+                <a href="#about" class="button is-success is-inverted"> About Us </a>
+                </span>
+                <span class="navbar-item"></span>
+                <a href="#search" class="button is-success is-inverted"> Search </a>
+               </span>
+              <span class="navbar-item"></span>
+                <a href="#news" class="button is-success is-inverted"> News </a>
                 </span>
               </div>
             </div>
@@ -40,16 +44,18 @@
 
     </header>
     <!-- Search 1 Section -->
-
+    <div class="container" class="has-background-primary">
+      <!-- NOT FOR MVP -->
       <section id='about'> 
         <h2 class="text">About Us</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-          dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non.</p>
+        <p>Charity Search is an organization dedicated to helping people connect to a nonprofit organization near them.
+          Many people would often want to help out their community but don't know where to begin. Charity Search makes it easy. 
+          With just your zipcode, you can begin the impactful journey of community involvement here. Getting connected made easy.
+        </p>
         <!-- <input type="text" /> -->
       </section>
 
-      <section class="search">
+      <section id="search">
         <div class="card">
           <header class="card-header">
             <p class="card-header-title">
@@ -61,10 +67,10 @@
         <!-- FOR MVP - ZIP CODE SEARCH -->
         <!-- <h2>Charity Location / Category Search</h2> -->
         <input type="text" id="zip-input" placeholder="enter zip" class="input is-success" />
-        <button class="button is-success is-outlined" id="zip-submit">Search</button>
+        <button class="button is-success" id="zip-submit">Search</button>
 
   <!-- News Section -->
-  <section class="news">
+  <section id="news">
     <h2 class="title is-3 section-title">Related News</h2>
     <div>
       <div class="columns news-btns" id="news-btns">
@@ -86,19 +92,15 @@
     <footer class="footer">
       <div class="content has-text-centered">
         <p>
-          <strong>Bulma</strong><a href="https://dutylabs.ro"></a>. The source code is licensed
+          <strong>Charity Search</strong><a href="https://dutylabs.ro"></a>. The source code is licensed.
           <a href="#"></a>.
-          <a href="#">CC BY Alex Rusu</a>.
         </p>
         </div>
       </div>
-      <!-- <h2>Footer</h2> -->
-
     </footer>
     <script src="./assets/js/script.js"></script>
   </body>
-
+</html>
 </html>
 
-</html>
 
