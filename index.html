@@ -74,7 +74,7 @@
         </header>
       </div>
       <input type="text" id="zip-input" placeholder="Enter zip code" class="input is-success" />
-      <p id="error">Error: Not a valid zip code</p>
+      <p class="error" id="error"></p>
       <button class="button is-success" id="zip-submit">Search</button>
     </div>
   </section>
@@ -83,6 +83,7 @@
   <!-- News Section -->
   <section class="news is-flex is-flex-direction-column" id="news-section">
     <h2 class="title is-3 section-title">Related News</h2>
+    <p class="error" id="news-error"></p>
     <div>
       <div class="columns news-btns" id="news-btns">
         <button class="column button is-success is-inverted" type="button">Charity</button>

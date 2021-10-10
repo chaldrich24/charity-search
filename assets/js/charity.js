@@ -2,6 +2,7 @@ var newsEl = document.querySelector("#news-container");
 var backEl = document.querySelector("#search-results");
 var nameEl = document.querySelector("#charity-name");
 var infoEl = document.querySelector("#charity-info");
+var errorEl = document.querySelector("#error");
 
 const API_KEY = "087d90e10dc627fdf0b4f716aacb3e60";
 const NEWS_API_KEY = "a5c2b9e921dbcf681f4356e52f806b05";
@@ -24,6 +25,10 @@ var getCharityInfo = function(ein) {
             console.log(data);
             displayCharityInfo(data);
         })
+    })
+    .catch(function() {
+        errorEl.textContent = "Error: Unable to connect, please go back and try again"
+        errorEl.style.display = "block";
     })
 };
 

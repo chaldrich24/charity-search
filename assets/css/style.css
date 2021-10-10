@@ -209,6 +209,19 @@ img {
     background-size: 100% 100%;
 }
 
+.error {
+    text-align: center;
+    color: #ff5b5b;
+    font-weight: bold;
+    margin-top: 5px;
+    display: none;
+    text-shadow: 1px 1px #000;
+}
+
+.news .error {
+    margin-bottom: 15px;
+}
+
 #search {
     padding-top: 5%;
 }
@@ -226,13 +239,5 @@ img {
     padding: 2% 5% 5% 5%;
     width: 75%;
     margin: auto;
-}
-
-#error {
-    text-align: center;
-    color: #ff5b5b;
-    font-weight: bold;
-    margin-top: 5px;
-    display: none;
 }
 

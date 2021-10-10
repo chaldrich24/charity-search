@@ -4,16 +4,10 @@ var newsButtonsEl = document.querySelector("#news-btns");
 var newsContEl = document.querySelector("#news-container");
 var prevEl = document.querySelector("#previous-search");
 var errorEl = document.querySelector("#error");
+var newsErrorEl = document.querySelector("#news-error");
 
 const API_KEY = "ac4aab77f1db8db5e50d166a738d0869";
 const NEWS_API_KEY = "a5c2b9e921dbcf681f4356e52f806b05";
-
-function getCharitiesByZip(zip) {
-    var url = "https://powerful-retreat-80790.herokuapp.com/http://data.orghunter.com/v1/charitysearch?user_key=" + API_KEY + "&szipCode=" + zip;
-    fetch(url)
-    .then(response => response.json())
-    .then(res => console.log(res))
-}
 
 function changePage(event) {
     event.preventDefault();
@@ -24,8 +18,9 @@ function changePage(event) {
     }
     
     if(zipVal.length < 5 || isNaN(zipVal)) {
+        errorEl.textContent = "Error: Not a valid zip code"
         errorEl.style.display = "block";
-        setTimeout(function() {errorEl.style.display = "none"}, 2000);
+        setTimeout(function() {errorEl.style.display = "none"}, 3000);
         zipInput.value = "";
     }
 
@@ -51,6 +46,12 @@ var getNews = function(event) {
         .then(function(data) {
             displayNews(data);
             console.log(data);
+        })
+        .catch(function() {
+            newsErrorEl.textContent = "Error: Unable to connect, please try again"
+            newsErrorEl.style.display = "block";
+            setTimeout(function() {newsErrorEl.style.display = "none"}, 4000);
+            zipInput.value = "";
         })
     }
 }
