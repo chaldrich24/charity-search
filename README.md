@@ -46,7 +46,7 @@ User is able to find news articles about different catagories of charities
 User can click on previously searched city to get weather for that city
 
 # Deployed Application URL
-
+https://chaldrich24.github.io/charity-search/
 
 # Mock-Up
 https://watch.screencastify.com/v/Xd2TqIThy2VmYTvXx3w7
