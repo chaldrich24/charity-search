@@ -17,7 +17,7 @@ function changePage(event) {
         zipVal = prevEl.value;
     }
     
-    if(zipVal.length < 5 || isNaN(zipVal)) {
+    if(zipVal.length < 5 || zipVal.length > 5 || isNaN(zipVal)) {
         errorEl.textContent = "Error: Not a valid zip code"
         errorEl.style.display = "block";
         setTimeout(function() {errorEl.style.display = "none"}, 3000);
