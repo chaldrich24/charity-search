@@ -1,14 +1,12 @@
-
-   
 var zipInput = document.getElementById("zip-input");
 var zipSubmit = document.getElementById("zip-submit");
 var newsButtonsEl = document.querySelector("#news-btns");
 var newsContEl = document.querySelector("#news-container");
+var prevEl = document.querySelector("#previous-search");
+var errorEl = document.querySelector("#error");
 
 const API_KEY = "ac4aab77f1db8db5e50d166a738d0869";
 const NEWS_API_KEY = "a5c2b9e921dbcf681f4356e52f806b05";
-
-zipSubmit.addEventListener("click", changePage);
 
 function getCharitiesByZip(zip) {
     var url = "https://powerful-retreat-80790.herokuapp.com/http://data.orghunter.com/v1/charitysearch?user_key=" + API_KEY + "&szipCode=" + zip;
@@ -20,10 +18,19 @@ function getCharitiesByZip(zip) {
 function changePage(event) {
     event.preventDefault();
     var zipVal = zipInput.value;
-    if(zipVal.length <= 0) {
-        alert("very bad")
+
+    if (event.target.id === "previous-search") {
+        zipVal = prevEl.value;
     }
+    
+    if(zipVal.length < 5 || isNaN(zipVal)) {
+        errorEl.style.display = "block";
+        setTimeout(function() {errorEl.style.display = "none"}, 2000);
+        zipInput.value = "";
+    }
+
     else {
+        saveZip(zipVal);
         document.location.replace("./list-page.html?zip=" + zipVal);
     }
 }
@@ -85,4 +92,23 @@ var displayNews = function(news) {
     }
 }
 
+var saveZip = function(zip) {
+    localStorage.setItem("zip", zip);
+}
+
+var loadZip = function() {
+    if (localStorage.getItem("zip") === null) {
+        return false;
+    }
+
+    var zip = localStorage.getItem("zip");
+    prevEl.textContent = "Previously Searched: " + zip;
+    prevEl.setAttribute("value", zip);
+    prevEl.style.display = "inline-block";
+}
+
+loadZip();
+
+zipSubmit.addEventListener("click", changePage);
 newsButtonsEl.addEventListener("click", getNews);
+prevEl.addEventListener("click", changePage);

@@ -67,12 +67,14 @@
     <div class="search is-flex is-flex-direction-column">
       <div class="card">
         <header class="card-header">
-          <p class="card-header-title is-centered">
+          <p class="card-header-title is-centered is-flex-direction-column">
             Charity Location / Category
+            <button type="button" class="previous-search" id="previous-search"></button>
           </p>
         </header>
       </div>
       <input type="text" id="zip-input" placeholder="Enter zip code" class="input is-success" />
+      <p id="error">Error: Not a valid zip code</p>
       <button class="button is-success" id="zip-submit">Search</button>
     </div>
   </section>

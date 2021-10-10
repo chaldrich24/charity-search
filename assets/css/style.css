@@ -115,7 +115,7 @@ img {
 .card-header-title {
     font-weight: bold;
     color: #fff;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .section-title {
@@ -174,6 +174,22 @@ img {
     margin-bottom: 30px;
 }
 
+.previous-search {
+    display: none;  
+    font-size: 12px;
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 3px 8px;
+    margin-top: 5px;
+}
+
+.previous-search:hover {
+    background-color: #e7e7e7;
+    font-weight: bold;
+}
+
 /* Clearfix (clear floats) */
 .row::after {
     content: "";
@@ -210,5 +226,13 @@ img {
     padding: 2% 5% 5% 5%;
     width: 75%;
     margin: auto;
+}
+
+#error {
+    text-align: center;
+    color: #ff5b5b;
+    font-weight: bold;
+    margin-top: 5px;
+    display: none;
 }
 
