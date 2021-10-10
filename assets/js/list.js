@@ -22,6 +22,13 @@ function getCharitiesByZip(zip) {
 
 var displayCharities = function(data) {
     console.log(data);
+    if (data.data.length === 0) {
+        setTimeout(function() {document.location.replace("./index.html")}, 2000);
+        errorEl.textContent = "Error: Not a valid zip code"
+        errorEl.style.display = "block";
+        localStorage.removeItem("zip");
+    }
+
     for (i = 0; i < data.data.length; i++) {
         // Create list item container
         var itemContainer = document.createElement("div");
