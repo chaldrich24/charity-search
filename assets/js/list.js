@@ -1,4 +1,5 @@
 var charityListEl = document.querySelector("#charity-list");
+var errorEl = document.querySelector("#error");
 const API_KEY = "087d90e10dc627fdf0b4f716aacb3e60";
 
 var getZip = function() {
@@ -7,14 +8,16 @@ var getZip = function() {
     getCharitiesByZip(zipCode);
 }
 
-
-
 function getCharitiesByZip(zip) {
     var url = "https://powerful-retreat-80790.herokuapp.com/http://data.orghunter.com/v1/charitysearch?user_key=" + API_KEY + "&eligible=1&zipCode=" + zip;
     console.log(url);
     fetch(url)
     .then(response => response.json())
     .then(res => displayCharities(res))
+    .catch(function() {
+        errorEl.textContent = "Error: Unable to connect, please go back and try again"
+        errorEl.style.display = "block";
+    })
 }
 
 var displayCharities = function(data) {
