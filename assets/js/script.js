@@ -40,12 +40,21 @@ var getNews = function(event) {
         event.target.style.border = "2px solid #000";
 
         var offset = getRandomNum(100);
-        var url = "http://api.mediastack.com/v1/news?access_key=" + NEWS_API_KEY + "&offset=" + offset + "&sort=popularity&limit=5&languages=en&keywords=" + event.target.textContent;
+        var url = "https://powerful-retreat-80790.herokuapp.com/http://api.mediastack.com/v1/news?access_key=" + NEWS_API_KEY + "&offset=" + offset + "&sort=popularity&limit=5&languages=en&keywords=" + event.target.textContent;
         fetch(url)
-        .then(response => response.json())
-        .then(function(data) {
-            displayNews(data);
-            console.log(data);
+        .then(function(response) {
+            if (response.ok) {
+                response.json().then(function(data) {
+                displayNews(data);
+                console.log(data);
+                })
+            }
+            else {
+                newsErrorEl.textContent = "Error: Unable to connect, please try again"
+                newsErrorEl.style.display = "block";
+                setTimeout(function() {newsErrorEl.style.display = "none"}, 4000);
+                zipInput.value = "";
+            }
         })
         .catch(function() {
             newsErrorEl.textContent = "Error: Unable to connect, please try again"
