@@ -6,9 +6,37 @@ I WANT to search for chairites near me
 
 SO THAT I can choose one to volunteer with
 
+## Table of Contents 
+------
 
-# Acceptance Criteria
-GIVEN a website with search input
+* [Installation](#installation)
+
+* [User](#user)
+
+* [Contributing](#Contributing)
+
+## Installation
+
+1. Download or clone repository
+2. Open the main page (index.html) on your browser to view
+3. Use a text editor to view all coding, Visual Studio Coding is recommended.
+
+## Features
+
+* HTML
+* CSS
+* Bulma
+* Javascript
+* APIs 
+
+# User
+The user is able to search for a nonprofit and charity organization near them using their zipcode
+The user gets a list of nonprofits in their area and are able to browse and find general details
+User is able to find news articles about different catagories of charities 
+User can click on previously searched city to get weather for that city
+
+# App Criteria
+A website with search input
 
 WHEN I scroll through the application
 
@@ -39,14 +67,15 @@ WHEN I click on news section items
 THEN I am presented with list of news article headlines 
 
 
-# User
-The user is able to search for a nonprofit and charity organization near them using their zipcode
-The user gets a list of nonprofits in their area and are able to browse and find general details
-User is able to find news articles about different catagories of charities 
-User can click on previously searched city to get weather for that city
-
 # Deployed Application URL
 https://chaldrich24.github.io/charity-search/
 
 # Mock-Up
 https://watch.screencastify.com/v/Xd2TqIThy2VmYTvXx3w7
+
+# Contributing
+✉️ Contact us with any questions ❓: 
+
+:octocat: [Rahil Rahimi](https://github.com/rahilrahimi)
+:octocat: [Chad Chaldrich](https://github.com/chaldrich24)
+:octocat: [Arsema Kidane](https://github.com/akidane23)
